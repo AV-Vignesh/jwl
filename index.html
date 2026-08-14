@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1a1114">
+<title>JewelBox</title>
+<meta name="description" content="Private gold & silver jewellery portfolio — on your phone, nowhere else.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <svg class="brand-gem" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9l4-6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M2 9h20M9 3l3 6 3-6M12 9v12" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" opacity=".7"/></svg>
+    <span>JewelBox</span>
+  </div>
+  <div class="topbar-rate" id="topbarRate" hidden></div>
+</header>
+
+<main id="view" class="view"></main>
+
+<nav class="tabbar" aria-label="Main">
+  <button class="tab" data-tab="home" aria-label="Home">
+    <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M5.5 10v9.5h13V10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Home</span>
+  </button>
+  <button class="tab" data-tab="jewels" aria-label="Jewels">
+    <svg viewBox="0 0 24 24"><path d="M7 4h10l3.5 5L12 20 3.5 9 7 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3.5 9h17" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span>Jewels</span>
+  </button>
+  <button class="tab tab-add" data-tab="add" aria-label="Add jewel">
+    <span class="add-circle"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+    <span>Add</span>
+  </button>
+  <button class="tab" data-tab="rates" aria-label="Rates">
+    <svg viewBox="0 0 24 24"><path d="M4 17l5-6 4 3 7-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 5h4v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Rates</span>
+  </button>
+  <button class="tab" data-tab="settings" aria-label="Settings">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.8v2.6M12 18.6v2.6M21.2 12h-2.6M5.4 12H2.8M18.5 5.5l-1.8 1.8M7.3 16.7l-1.8 1.8M18.5 18.5l-1.8-1.8M7.3 7.3 5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <span>Settings</span>
+  </button>
+</nav>
+
+<div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true"></div>
+<div class="toast" id="toast" hidden></div>
+
+<script src="./app.js"></script>
+</body>
+</html>
